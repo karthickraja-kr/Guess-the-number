@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+    <!-- bootstrap css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Guess the Number</span>
+    </nav>
+    <div class="container text-center">
+      <h1 class="banner p-4">1.2.3...</h1>
+      <!-- form -->
+      <div class="form-group">
+        <input
+          type="number"
+          id="number-guess"
+          class="form-control form-control-lg"
+          placeholder="What's your number? ( 0-99 )"
+        />
+      </div>
+      <!-- Result -->
+      <div id="result"></div>
+      <!-- Button -->
+      <button
+        type="button"
+        id="number-submit"
+        class="btn btn-lg btn-secondary m-2"
+      >
+        Check
+      </button>
+      <button
+        type="button"
+        id="restart-game"
+        class="btn btn-lg btn-success m-2"
+      >
+        Restart
+      </button>
+      <!-- History -->
+      <div id="history"></div>
+    </div>
+    <!-- Js -->
+    <script src="./script.js"></script>
+  </body>
+</html>
