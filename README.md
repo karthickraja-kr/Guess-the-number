@@ -1,6 +1,6 @@
 # Guess-the-name
-Guess The Name is a website you have to find a number.
+Guess-the-name is a Guessing game. you have to find the number
 
-It is a simple Javascript website normal bootstrap components to interact and fun with my project
+It was developed with vanilla javascript and basic bootstrap components UI.
 
-Try this http://karthickraja.me/Guess-the-name/
+Try this game @  http://karthickraja.me/Guess-the-name/
