@@ -28,10 +28,18 @@ function displayResult(numberGuess) {
   if (numberGuess >= 0 && numberGuess <= 99) {
     if (numberGuess > correctNumber) {
       type = "warning";
-      message = "Your number is too high";
+      if(abs(correctNumber-numberGuess) >= 10){
+        message = "Your number is just high";
+      }else{
+        message = "Your number is too high";
+      }
     } else if (numberGuess < correctNumber) {
       type = "warning";
-      message = "Your number is too low";
+      if(abs(correctNumber-numberGuess) >= 10){
+        message = "Your number is just low";
+      }else{
+        message = "Your number is too low";
+      }
     } else {
       message = "Awesome you find it";
       type = "success";
