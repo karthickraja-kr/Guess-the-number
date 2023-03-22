@@ -32,7 +32,7 @@ function displayResult(numberGuess) {
     } else if ((numberGuess > correctNumber) && ((numberGuess-correctNumber) <= 10)) {
       type = "warning";
       message = "Your number is little high";
-    }else if ((numberGuess < correctNumber) && ((correctNumber-numberGuess) <= 10)) {
+    }else if ((numberGuess < correctNumber) && ((correctNumber-numberGuess) > 10)) {
       type = "warning";
       message = "Your number is little high";
     }else if ((numberGuess < correctNumber) && ((correctNumber-numberGuess) <= 10)) {
