@@ -26,20 +26,18 @@ function displayResult(numberGuess) {
   let type, message;
   storeGuesses(numberGuess);
   if (numberGuess >= 0 && numberGuess <= 99) {
-    if (numberGuess > correctNumber) {
+    if ((numberGuess > correctNumber) && ((numberGuess-correctNumber)> 10)) {
       type = "warning";
-      if(abs(correctNumber-numberGuess) >= 10){
-        message = "Your number is just high";
-      }else{
-        message = "Your number is too high";
-      }
-    } else if (numberGuess < correctNumber) {
+      message = "Your number is too high";
+    } else if ((numberGuess > correctNumber) && ((numberGuess-correctNumber) <= 10)) {
       type = "warning";
-      if(abs(correctNumber-numberGuess) >= 10){
-        message = "Your number is just low";
-      }else{
-        message = "Your number is too low";
-      }
+      message = "Your number is little high";
+    }else if ((numberGuess < correctNumber) && ((correctNumber-numberGuess) <= 10)) {
+      type = "warning";
+      message = "Your number is little high";
+    }else if ((numberGuess < correctNumber) && ((correctNumber-numberGuess) <= 10)) {
+      type = "warning";
+      message = "Your number is little high";
     } else {
       message = "Awesome you find it";
       type = "success";
