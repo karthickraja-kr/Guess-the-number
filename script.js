@@ -23,21 +23,25 @@ function playGame() {
 }
 // Display Alert
 function displayResult(numberGuess) {
+  // If the value is empty then eliminate.
+  if (numberGuess === "") {
+    return;
+  }
   let type, message;
   storeGuesses(numberGuess);
   if (numberGuess >= 0 && numberGuess <= 99) {
-    if ((numberGuess > correctNumber) && ((numberGuess-correctNumber)> 10)) {
+    if ((numberGuess > correctNumber) && (Math.abs(numberGuess-correctNumber)> 10)) {
       type = "warning";
       message = "Your number is too high";
-    } else if ((numberGuess > correctNumber) && ((numberGuess-correctNumber) <= 10)) {
+    } else if ((numberGuess > correctNumber) && (Math.abs(numberGuess-correctNumber) <= 10)) {
       type = "warning";
       message = "Your number is little high";
-    }else if ((numberGuess < correctNumber) && ((correctNumber-numberGuess) > 10)) {
+    }else if ((numberGuess < correctNumber) && (Math.abs(correctNumber-numberGuess) > 10)) {
       type = "warning";
-      message = "Your number is little high";
-    }else if ((numberGuess < correctNumber) && ((correctNumber-numberGuess) <= 10)) {
+      message = "Your number is too low";
+    }else if ((numberGuess < correctNumber) && (Math.abs(correctNumber-numberGuess) <= 10)) {
       type = "warning";
-      message = "Your number is little high";
+      message = "Your number is little low";
     } else {
       message = "Awesome you find it";
       type = "success";
